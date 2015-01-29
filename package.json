@@ -1,6 +1,6 @@
 {
   "name": "angular-un-svg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Inline your external SVG files into DOM at runtime.",
   "main": "dist/un-svg.js",
   "scripts": {
