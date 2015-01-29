@@ -10,7 +10,7 @@ if not angular
     '''
 
 angular.module 'wyvernzora.un-svg', []
-.directive 'un-svg', ($http) ->
+.directive 'unSvg', ($http) ->
   restrict: 'EA'
   scope:
     source: '@svgSrc'
