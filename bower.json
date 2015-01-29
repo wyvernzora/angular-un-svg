@@ -1,0 +1,25 @@
+{
+  "name": "angular-un-svg",
+  "version": "1.0.0",
+  "authors": [
+    "Denis Luchkin-Zhou <wyvernzora@gmail.com>"
+  ],
+  "description": "Replace <img> with external SVG with inline SVG at runtime.",
+  "main": "dist/un-svg.js",
+  "keywords": [
+    "svg",
+    "angular"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jluchiji/angular-un-svg",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.11"
+  }
+}

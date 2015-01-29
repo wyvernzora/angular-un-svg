@@ -1,0 +1,14 @@
+# Node.js Packages
+node_modules
+
+# Bower.js Packages
+bower_components
+
+# OS X Junk Files
+.DS_Store
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp.*
