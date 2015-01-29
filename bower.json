@@ -4,7 +4,7 @@
   "authors": [
     "Denis Luchkin-Zhou <wyvernzora@gmail.com>"
   ],
-  "description": "Replace <img> with external SVG with inline SVG at runtime.",
+  "description": "Inline your external SVG files into DOM at runtime.",
   "main": "dist/un-svg.js",
   "keywords": [
     "svg",
