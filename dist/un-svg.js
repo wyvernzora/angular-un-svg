@@ -3,7 +3,7 @@
     throw new Error('Angular.js is not loaded! Consider using \'de-svg\' bower package if you\nare not using Angular.js.');
   }
 
-  angular.module('wyvernzora.un-svg', []).directive('un-svg', function($http) {
+  angular.module('wyvernzora.un-svg', []).directive('unSvg', function($http) {
     return {
       restrict: 'EA',
       scope: {
