@@ -27,9 +27,8 @@ angular.module 'wyvernzora.un-svg', []
         if scope.removeCss
           svg.find('path').removeAttr 'style'
         # Add classes from <un-svg> to <svg>
-        classes = svg.attr('class') ? []
-        classes = classes.concat attr.class ? []
-        if classes.length isnt 0 then svg.attr 'class', classes
+        svg.css 'width', '100%'
+        svg.css 'height', '100%'
         element.html svg
 
     scope.$watch 'source', (newVal) ->
