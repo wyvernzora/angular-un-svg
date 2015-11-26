@@ -17,7 +17,8 @@ angular.module 'wyvernzora.un-svg', []
     removeCss: '@svgNoInlineCss'
   link: (scope, element, attr) ->
     # Get the SVG document
-    $http.get scope.source
+    injectSvg = (source) ->
+      $http.get source
       .success (data) ->
         # Try to parse the response
         svg = angular.element data
@@ -29,4 +30,9 @@ angular.module 'wyvernzora.un-svg', []
         classes = svg.attr('class') ? []
         classes = classes.concat attr.class ? []
         if classes.length isnt 0 then svg.attr 'class', classes
-        element.replaceWith svg
+        element.html svg
+
+    scope.$watch 'source', (newVal) ->
+      injectSvg newVal
+
+    return injectSvg scope.source
