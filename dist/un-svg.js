@@ -11,22 +11,26 @@
         removeCss: '@svgNoInlineCss'
       },
       link: function(scope, element, attr) {
-        return $http.get(scope.source).success(function(data) {
-          var classes, svg, _ref, _ref1;
-          svg = angular.element(data);
-          if (!svg) {
-            return;
-          }
-          if (scope.removeCss) {
-            svg.find('path').removeAttr('style');
-          }
-          classes = (_ref = svg.attr('class')) != null ? _ref : [];
-          classes = classes.concat((_ref1 = attr["class"]) != null ? _ref1 : []);
-          if (classes.length !== 0) {
-            svg.attr('class', classes);
-          }
-          return element.replaceWith(svg);
+        var injectSvg;
+        injectSvg = function(source) {
+          return $http.get(source).success(function(data) {
+            var svg;
+            svg = angular.element(data);
+            if (!svg) {
+              return;
+            }
+            if (scope.removeCss) {
+              svg.find('path').removeAttr('style');
+            }
+            svg.css('width', '100%');
+            svg.css('height', '100%');
+            return element.html(svg);
+          });
+        };
+        scope.$watch('source', function(newVal) {
+          return injectSvg(newVal);
         });
+        return injectSvg(scope.source);
       }
     };
   }]);
